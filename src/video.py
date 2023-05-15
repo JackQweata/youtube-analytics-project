@@ -20,7 +20,7 @@ class Video:
     @classmethod
     def get_service(cls):
         api_key = os.getenv('YT_API_KEY')
-        youtube = googleapiclient.discovery.build('youtube', 'v3', developerKey='AIzaSyDCXiFDMn7aFhBp7Sr9BNwfNOClAoPi-Yk')
+        youtube = googleapiclient.discovery.build('youtube', 'v3', developerKey=api_key)
         return youtube
 
     def populate_video_info(self):
