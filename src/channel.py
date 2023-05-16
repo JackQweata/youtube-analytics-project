@@ -29,10 +29,6 @@ class Channel:
     def channel_id(self):
         return self._channel_id
 
-    @channel_id.setter
-    def channel_id(self, value):
-        raise AttributeError("'channel_id' of 'Channel' object has no setter")
-
     @classmethod
     def get_service(cls):
         api_key = os.getenv('YT_API_KEY')
